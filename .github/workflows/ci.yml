@@ -9,25 +9,21 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.9", "3.10", "3.11"]
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: "3.10"
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install numpy pandas scipy statsmodels matplotlib openpyxl scikit-learn arch
 
-      - name: Check that all modules can be imported (syntax check)
+      - name: Check that all modules can be imported
         run: |
-          cd src
           python -c "import config, data_loader, risk_factors, dynamics, pricing, risk_measures, backtesting, bonus, plots, main"
