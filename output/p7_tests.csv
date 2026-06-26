@@ -1,0 +1,5 @@
+sub,breaches,expected,Kupiec_p,Kupiec_ok,Christ_ind_p,Christ_cc_p,Christ_cc_ok,DQ_p,DQ_ok
+total,1,2.5,0.2684,True,0.929,0.5398,True,0.9854,True
+stocks,2,2.5,0.7236,True,0.8583,0.9245,True,0.9963,True
+bonds,3,2.5,0.7779,True,0.7884,0.927,True,0.8478,True
+fx,2,2.5,0.7236,True,0.8583,0.9245,True,0.9998,True
