@@ -24,6 +24,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install numpy pandas scipy statsmodels matplotlib openpyxl scikit-learn arch
 
-      - name: Check that all modules can be imported
+      - name: Run full risk model (including backtesting)
         run: |
-          python -c "import config, data_loader, risk_factors, dynamics, pricing, risk_measures, backtesting, bonus, plots, main"
+          python main.py
